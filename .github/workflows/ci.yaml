@@ -1,5 +1,5 @@
 
-name: modele CI
+name: sctk CI
 
 on: [push, pull_request]
 
@@ -36,7 +36,7 @@ jobs:
           poetry run black tests
           poetry run flake8 tests
           poetry run mypy tests --ignore-missing-import
-          poetry run pytest --cov=modele --cov-report term --cov-report xml
+          poetry run pytest --cov=sctk --cov-report term --cov-report xml
 
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v4

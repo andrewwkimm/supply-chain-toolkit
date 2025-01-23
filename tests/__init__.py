@@ -1,1 +1,1 @@
-"""The modele tests."""
+"""The sctk tests."""

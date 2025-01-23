@@ -1,3 +1,3 @@
-# modele
+# sctk
 
-The modele Python project template.
+The sctk Python project template.

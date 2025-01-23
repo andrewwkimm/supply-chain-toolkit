@@ -1,6 +1,6 @@
-"""Tests for modele."""
+"""Tests for sctk."""
 
-from modele import __version__
+from sctk import __version__
 
 
 def test_version() -> None:
