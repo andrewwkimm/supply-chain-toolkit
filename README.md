@@ -16,10 +16,10 @@ from sctk.inventory import InventoryOptimizer
 
 
 # Load data
-df = pl.read_csv('sales_data.csv')
+df = pl.read_csv("sales_data.csv")
 
 # Calculate demand statistics
-demand_std = df['quantity'].std()
+demand_std = df["quantity"].std()
 
 # Initialize the inventory optimizer
 optimizer = InventoryOptimizer(lead_time=7, service_level=0.95)
@@ -28,7 +28,7 @@ optimizer = InventoryOptimizer(lead_time=7, service_level=0.95)
 safety_stock = optimizer.calculate_safety_stock(demand_std)
 
 # Calculate reorder point (assuming average daily demand)
-average_sales = df['quantity'].mean()
+average_sales = df["quantity"].mean()
 reorder_point = optimizer.calculate_reorder_point(average_sales, safety_stock)
 
 print(f"Safety Stock: {safety_stock}")
