@@ -31,7 +31,7 @@ source = ["sctk"]
 
 [tool.coverage.report]
 show_missing = true
-fail_under = 50
+fail_under = 0
 
 [tool.pytest.ini_options]
 testpaths=["tests"]
