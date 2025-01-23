@@ -34,13 +34,15 @@ class InventoryOptimizer:
         safety_stock_level = z_score * demand_std * np.sqrt(self.lead_time)
         return safety_stock_level
 
-    def calculate_reorder_point(self, avg_demand: float, safety_stock: float) -> float:
+    def calculate_reorder_point(
+        self, average_sales: float, safety_stock: float
+    ) -> float:
         """Calculates the reorder point considering lead time.
 
         Parameters
         ----------
-        avg_demand: float
-            Average daily/weekly demand.
+        average_sales: float
+            Average daily or weekly sales.
         safety_stock: float
             Calculated safety stock level.
 
@@ -48,5 +50,5 @@ class InventoryOptimizer:
         -------
             reorder_point
         """
-        reorder_point = (avg_demand * self.lead_time) + safety_stock
+        reorder_point = (average_sales * self.lead_time) + safety_stock
         return reorder_point
