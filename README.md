@@ -12,7 +12,7 @@ Usage will vary depending on which module is used. Using the `InventoryOptimizer
 ```python
 import polars as pl
 
-from sckt.inventory import InventoryOptimizer
+from sctk.inventory import InventoryOptimizer
 
 
 # Load data
