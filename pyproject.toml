@@ -7,6 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10"
+scikit-learn = "^1.6.1"
+scipy = "^1.15.1"
+polars = "^1.20.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = ">=7.1.3"
